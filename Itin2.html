@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://www.cs.mun.ca/~g25gal/comment.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.cs.mun.ca/~g25gal/stylesheet.css">
+<meta charset="ISO-8859-1">
+<title>Happy Travels</title>
+</head>
+
+<body>
+
+<div class="container centerspan">
+<div class="column">
+<h1>Zurich Itinerary</h1>
+</div>
+<div class="column">
+        <a href="http://www.cs.mun.ca/~g25gal/imgs/temp.JPG"><img alt="Bahamas" src="http://www.cs.mun.ca/~g25gal/imgs/temp_thumb.jpg"></a>
+</div>
+<div class="column">
+        <a href="http://www.cs.mun.ca/~g25gal/imgs/zurich-switzerland.jpg"><img alt="Switzerland" src="http://www.cs.mun.ca/~g25gal/imgs/zurich-switzerland_thumb.jpg"></a>
+	</div>	
+			
+		<img></img><img></img><img></img>
+</div>
+
+<div class="container">
+	<div class="column itMid">
+		<h1>Available Rates:</h1>
+			<ul><li>Deluxe: $7500</li><li>Standard: $5000</li><li>Economy: $3750</li></ul>
+	</div>
+
+	<div id="column">
+		<div class= "cellrows">
+			<p>Staying in the five-star Park Hyatt Zurich Hotel, you'll quickly discover why Zurich is such a uniquely popular tourist destination: it has something to offer for everyone. Whether you're interested by history, art, nature, or something else altogether, you'll love Zurich!</p><blockquote>"Join cheesemakers in a high valley, try to call the shepherds on an alphorn, and hike through some of the world's most stunning mountain scenery."
+<p>Rick Steves (author)</p></blockquote>
+		</div>
+
+		<div class = "cellrows">
+			<p> As the top 5 tourist destinations in Zurich, TripAdvisor.com recommends <ol><li>Lake Zurich</li><li>Old Town (Altstadt)</li><li>Walking Tours</li><li>Uetliberg Mountain</li><li>Museum of Art (Kunsthaus Zurich)</li></ol></p>
+		</div>
+	</div>
+
+</div>
+
+<hr>
+
+<div class="container">
+
+	<div class="column itMid">
+		<p>Included in the price we've listed are airfare, accommodation at a five-star hotel, transportation both ways between Zurich's airport and hotel, and one meal a day.</p>
+	</div>
+
+	<div class="column itMid">
+		<p>The price listed does not include transportation beyond that listed in the section to the left, taxes, fees, or any other expense incurred over the course of the vacation.</p>
+	</div>
+
+</div>
+<br>
+
+	<div class="container centerspan">
+<ul id="comments">
+	</ul>
+
+<!-- Hide forms initially with Javascript (visible for non Javascript users) -->
+<script type="text/javascript">
+    $("#form-A,#form-B").hide();
+</script>
+
+<!-- A dropdown to select a value -->
+<label for="choose-form">Are you a Traveler or Hotel Manger: </label> 
+<select id="choose-form">
+    <option value="form-A">Traveler</option>
+    <option value="form-B">Hotel Mananger</option>
+</select>
+    <br>
+
+<!-- and some simple jQuery -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#form-B").hide();
+        $("#choose-form").change(function() {
+
+            //Hide -other- visible forms
+            $("#form-A, #form-B").hide();
+            $("#" + $(this).val()).show();
+        });
+    });
+</script>
+
+<div id="form-A" style="display:inline">
+    <label for="user_name">User Name</label><br>
+    <input type="text" id="user_name"> <br>
+    <label for="user_lat">latitude</label><br>
+    <input type="text" id="user_lat"><br>
+    <label for="user_long">longitude</label><br>
+    <input type="text" id="user_long">
+    
+    <br>
+    <label for="rating">Rating</label><br>
+    <select id="select_rating">
+        <option value="one_star">One Star</option>
+        <option value="two_star">Two Star</option>
+        <option value="three_star">Three Star</option>
+        <option value="four_star">Four Star</option>
+        <option value="five_star">Five Star</option>
+    </select><br>
+    <label for="commentbox">Comment: </label><br>
+    <input type="text" id="commentbox"><br>
+    <input type="button" id="submitTravel" value="Add Comment">
+</div>
+<div id="form-B">
+   <label for="comment">Response: </label><br>
+    <input type="text" id="hotelResp"><br>
+    <input type="button" id="submitHotel" value="Add Response">
+</div>
+	</div>
+
+
+
+
+</body></html>

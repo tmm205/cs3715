@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://www.cs.mun.ca/~g25gal/comment.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.cs.mun.ca/~g25gal/stylesheet.css">
+<meta charset="ISO-8859-1">
+<title>Happy Travels</title>
+</head>
+
+<body>
+
+<div class="container centerspan">
+<div class="column">
+<h1>Sydney Itinerary</h1>
+</div>
+<div class="column">
+        <a href="http://www.cs.mun.ca/~g25gal/imgs/temp.JPG"><img alt="Bahamas" src="http://www.cs.mun.ca/~g25gal/imgs/temp_thumb.jpg"></a>
+</div>
+<div class="column">
+        <a href="http://www.cs.mun.ca/~g25gal/imgs/zurich-switzerland.jpg"><img alt="Switzerland" src="http://www.cs.mun.ca/~g25gal/imgs/zurich-switzerland_thumb.jpg"></a>
+	</div>	
+			
+		<img></img><img></img><img></img>
+</div>
+
+<div class="container">
+	<div class="column itMid">
+		<h1>Available Rates:</h1>
+			<ul><li>Deluxe: $7500</li><li>Standard: $5000</li><li>Economy: $3750</li></ul>
+	</div>
+
+	<div id="column">
+		<div class= "cellrows">
+			<p>Whether you go to Sydney to experience its exotic beaches, vibrant nightlife, excellent cuisine, cultural events or even just to see the iconic Sydney Opera House, Sydney offers many exciting options to tourists looking to enjoy themselves.</p>
+		</div>
+
+		<div class = "cellrows">
+		<p>Tripadvisor.com ranks Sydney's top attractions as follows: <ol><li>Sydney Harbour</li><li>Condi to Coogee Beach Coastal Walk<li></li>Sydney Opera House</li><li>Sydney Harbour Bridge</li><li>Historical and Heritage Tours</li></ol></p>
+		</div>
+	</div>
+
+</div>
+
+<hr>
+
+<div class="container">
+
+	<div class="column itMid">
+		<p>Included in the trip's listed price are airfare and accommodation, as well as transport from Sydney's airport to your hotel.</p>
+	</div>
+
+	<div class="column itMid">
+		<p>Taxes, fees, meals, and the majority of transportation expenses are not included in the listed price.</p>
+	</div>
+
+</div>
+<hr>
+
+	<div class="container centerspan">
+		<ul id="comments">
+	</ul>
+
+<!-- Hide forms initially with Javascript (visible for non Javascript users) -->
+<script type="text/javascript">
+    $("#form-A,#form-B").hide();
+</script>
+
+<!-- A dropdown to select a value -->
+<label for="choose-form">Are you a Traveler or Hotel Manger: </label> 
+<select id="choose-form">
+    <option value="form-A">Traveler</option>
+    <option value="form-B">Hotel Mananger</option>
+</select>
+    <br>
+
+<!-- and some simple jQuery -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#form-B").hide();
+        $("#choose-form").change(function() {
+
+            //Hide -other- visible forms
+            $("#form-A, #form-B").hide();
+            $("#" + $(this).val()).show();
+        });
+    });
+</script>
+
+<div id="form-A" style="display:inline">
+    <label for="user_name">User Name</label><br>
+    <input type="text" id="user_name"> <br>
+    <label for="user_lat">latitude</label><br>
+    <input type="text" id="user_lat"><br>
+    <label for="user_long">longitude</label><br>
+    <input type="text" id="user_long">
+    
+    <br>
+    <label for="rating">Rating</label><br>
+    <select id="select_rating">
+        <option value="one_star">One Star</option>
+        <option value="two_star">Two Star</option>
+        <option value="three_star">Three Star</option>
+        <option value="four_star">Four Star</option>
+        <option value="five_star">Five Star</option>
+    </select><br>
+    <label for="commentbox">Comment: </label><br>
+    <input type="text" id="commentbox"><br>
+    <input type="button" id="submitTravel" value="Add Comment">
+</div>
+<div id="form-B">
+   <label for="comment">Response: </label><br>
+    <input type="text" id="hotelResp"><br>
+    <input type="button" id="submitHotel" value="Add Response">
+</div>
+	</div>
+
+	
+
+
+</div>
+</body>
+</html>
