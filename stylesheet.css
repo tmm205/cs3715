@@ -11,8 +11,6 @@ h1 {
 }
 
 .cellrows h2 {
-	padding-left: 10px;
-	margin-left: 10px;
 	font-size: 24px;
 }
 
@@ -93,7 +91,6 @@ a:active {
 	margin-top: 10px;
 	margin-left: 10px;
 	padding: 10px ;
-	background-color: #DDDDDD;
 }
 
 .cellrows {
@@ -103,6 +100,7 @@ a:active {
 	color: #000000;
 	padding: 10px;
 	background-color: #DDDDDD;
+	vertical-align: top;
 }
 
 .notbottom {
@@ -116,7 +114,6 @@ a:active {
 }
 
 .cellrows img {
-	float: left;
 	border-style: solid;
 	border-width: 1px;
 	border-color: #000000;
