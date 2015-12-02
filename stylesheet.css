@@ -90,7 +90,7 @@ a:active {
 	color: #000000;
 	margin-top: 10px;
 	margin-left: 10px;
-	padding: 10px ;
+	padding: 10px;
 }
 
 .cellrows {
@@ -117,6 +117,7 @@ a:active {
 	border-style: solid;
 	border-width: 1px;
 	border-color: #000000;
+	float: left;
 }
 
 .itMid {
