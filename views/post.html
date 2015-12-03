@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head>
+<link rel="stylesheet" type="text/css" href="/stylesheet.css">
+<meta charset="ISO-8859-1">
+<title>Happy Travels</title>
+</head>
+
+<body>
+
+
+<div id="form_submit">
+			<div id="submit_title_bar"><div id="submit_title">Submit A Post</div><div id="spacer"></div></div>
+			<div id="form_content">
+				<form action="" method="POST">
+					
+					<table>
+						<tr>
+							<td>Poster:</td>
+							<td>
+								<select name="poster" id="poster" onChange="javascript:toggleNameField()">
+									<option value="0">Traveller</option>
+									<option value="1">Hotel Manager</option>
+								</select>
+							</td>
+						</tr>
+						<tr id="namefield">
+							<td>Name:</td>
+							<td>
+								<input type="text" value="" name="name"/>
+							</td>
+						</tr>
+						<tr id="rateing">
+							<td>Rating:</td>
+							<td>
+								<input type="text" value="" name="title"/>
+							</td>
+						</tr>
+						<tr>
+							<td>Comment:</td>
+							<td>
+								<textarea name="content" rows=7></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td colspan=2 style="text-align: right">
+								<input type="submit" value="Submit" />
+							</td>
+						</tr>
+					</table>
+				</form>
+				</div>
+	</div>
+</body>
+</html>
