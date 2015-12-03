@@ -51,6 +51,8 @@ function bah(response, postData) {
 					continue;
 				
 				content += "<div id=\"temp\">";
+				content += "<div style=\"width: 250px;height: 200px\" id=\"mapdiv"+i+"\"></div>";
+				content += "<script type = \"text/javascript\">creatmap('mapdiv" + i + "'," + post.lati + "," + post.long + ");</script>";
 					content += "<pre><strong>" + post.name +  "</strong></pre>";
 					content += "<p><b>" + post.title + "</b></p>";
 					content += "<p>" + post.content + "</p>";
@@ -58,6 +60,7 @@ function bah(response, postData) {
 					content += "<a href=\"?deleteEvent=true&id=" + i + "\">Delete</a><br><br>\n";	
 				content += "</div>";
 			}
+            
 			
 			var showDiv = true;
 			if(showDeletedPosts){
@@ -73,6 +76,8 @@ function bah(response, postData) {
 						showDiv = false;
 					}
 					content += "<div id=\"temp\">";
+					content += "<div style=\"width: 250px;height: 200px\" id=\"mapdiv" + i + "\"></div>";
+					
 						content += "<pre><strong>" + post.name +  "</strong></pre>";
 						content += "<p><b>" + post.title + "</b></p>";
 						content += "<p>" + post.content + "</p>";

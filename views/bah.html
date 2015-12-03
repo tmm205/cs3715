@@ -2,6 +2,7 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
 <script src="http://maps.googleapis.com/maps/api/js"></script>
+
 <script type="text/javascript">
 function toggleNameField(){
 	var poster = document.getElementById("poster");
@@ -15,6 +16,23 @@ function toggleNameField(){
 		ratingField.style.display="none";
 	}
 }
+    
+function creatmap(div2, lat, long) {
+    // create map, adding to mapDiv
+    var div = document.getElementById(div2)
+    var mapProperties = {
+        // currently assumes decimal lat/long format
+        center: new google.maps.LatLng(lat, long),
+        zoom: 6
+    };
+    var map = new google.maps.Map(div, mapProperties);
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat, long),
+        map: map,
+        title: 'Location'
+    });
+}
+
 </script>
     <link rel="stylesheet" type="text/css" href="http://www.cs.mun.ca/~g25gal/stylesheet.css">
 <meta charset="ISO-8859-1">

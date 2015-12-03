@@ -3,6 +3,24 @@
 <link rel="stylesheet" type="text/css" href="/stylesheet.css">
 <meta charset="ISO-8859-1">
 <title>Happy Travels</title>
+
+
+    <script type="text/javascript">
+        
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        
+
+        function showPosition(position) {
+            document.getElementById("lati").value = position.coords.latitude;
+            document.getElementById("long").value = position.coords.longitude;
+        }
+        
+    </script>
+
 </head>
 
 <body>
@@ -12,7 +30,9 @@
 			<div id="submit_title_bar"><div id="submit_title">Submit A Post</div><div id="spacer"></div></div>
 			<div id="form_content">
 				<form action="" method="POST">
-					
+
+					<input type="hidden" value="" name="long" id="long"/>
+                    <input type="hidden" value="" name="lati" id="lati"/>
 					<table>
 						<tr>
 							<td>Poster:</td>
