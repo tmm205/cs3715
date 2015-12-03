@@ -1,110 +1,140 @@
-
-<style>
 body {
-	font: 12px Arial, Helvetica, Geneva, sans-serif;
-	color: black;
- 	font-size:        small;
- 	margin:         0px;
+	font-family: Arial, Helvetica, Geneva, sans-serif;
+	color: #000000;
+ 	font-size: 14px;
+ 	margin: 0px;
 }
 
+h1 {
+	font-size: 48px;
+	font-family: Helvetica, Geneva, sans-serif;
+}
 
+.cellrows h2 {
+	font-size: 24px;
+}
+
+a:link {
+    text-decoration: none;
+	color: #3333FF;
+}
+
+a:visited {
+    text-decoration: none;
+	color: #3333FF;
+}
+
+a:hover {
+    text-decoration: none;
+	color: #3333FF;
+}
+
+a:active {
+    text-decoration: none;
+	color: #3333FF;
+}
 
 .container {
 	display: table;
-	width: 100%;
-	margin-bottom: 20px;
+	width: 75%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin: 0 auto;
+}
+
+.centerspan {
+	color: #000000;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 0px;
+	padding: 10px 10px 10px 10px;
 	margin-top: 10px;
 	}
 
-.centerspan{
-	color: red;
+.column {
+	display: table-cell;
+	vertical-align: top;
+	margin: 10px;
+	padding: 10px 10px 10px 0px;
+}
+
+.headratio {
+	width: 50%;
+	padding : 0px 10px 0px 10px;
+}
+
+.address {
+	width: 50%;
+	padding : 0px 10px 0px 10px;
+	float: right;
+}
+
+.bodyratio {
+	width: 75%;
+}
+
+.footratio {
+	width: 100%;
+}
+
+.offers {
 	border-style: solid;
-	border-radius: 25px;
-	border-padding: 10px;
-	padding: 10px 10px 10px 10px;
-	margin-top:10px;
-	}
-
-.column{
-display: table-cell;
-vertical-align: top;
-margin:10px;
-padding: 10px 10px 10px 0px;
+	border-radius: 10px;
+	border-width: 1px;
+	color: #000000;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding: 10px;
 }
 
-.headratio{
-width: 50%;
-padding : 0px 10px 0px 10px;
-
+.cellrows {
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+	color: #000000;
+	padding: 10px;
+	background-color: #DDDDDD;
+	vertical-align: top;
 }
 
-.bodyratio{
-width: 75%;
-
+.notbottom {
+	margin-bottom: 10px;
+	margin-right: 20px;
 }
 
-.footratio{
-width:100%;
+.isbottom {
+	margin-bottom: 0px;
+	margin-right: 20px;
 }
 
-.offers{
-border-style: solid;
-border-radius: 25px;
-color:blue;
-border-padding: 10px;
-margin-left: 10px;
-padding:10px ;}
-
-
-.cellrows{
-border-style: solid;
-border-radius: 25px;
-color:blue;
-padding:10px;
+.cellrows img {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
 }
 
-.notbottom{
-margin-bottom: 10px;
-margin-right: 20px;}
+.itMid {
+	width: 50%;
+	padding-left: 10px;
+	border-style: solid;
+	border-radius: 10px;
+	border-width: 1px;
+}
 
-.isbottom{
-margin-bottom: 0px;
-margin-right: 20px;}
-
-.cellrows img{
-float:left;}
-
-.itMid{
-width:50%;
-padding-left:10px;
-border-style: solid;
-border-radius: 25px;}
-
-
-.inner img
-{
+.inner img {
     max-width: 100%;
     max-height: 100%;
     display: block;
-    margin: auto auto;
+    margin: 0 auto;
 }
 
-.outer
-{
+.outer {
     width: 100px;
     height: 100px;
 }
 
-.inner
-{
-    display:table-cell;
+.inner {
+    display: table-cell;
     height: 100px;
     width: 100px;
-    vertical-align: top;
 }
-
-
-
-
-
-</style>
